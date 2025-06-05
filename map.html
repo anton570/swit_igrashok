@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Карта іграшок</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Інтерактивна карта магазину</h1>
+
+  <nav>
+    <a href="index.html">
+        <img src="media/logo.png" alt="Головна">
+        Головна
+    </a>
+    <a href="myaki.html">
+        <img src="media/myaki_icon.png" alt="М’які іграшки">
+        М’які іграшки
+    </a>
+    <a href="muzychni.html">
+        <img src="media/muzychni_icon.png" alt="Музичні іграшки">
+        Музичні іграшки
+    </a>
+    <a href="konstruktory.html">
+        <img src="media/konstruktory_icon.png" alt="Конструктори">
+        Конструктори
+    </a>
+    <a href="pro_nas.html">
+        <img src="media/pro_nas_icon.png" alt="Про нас">
+        Про нас
+    </a>
+    <a href="map.html" class="active">
+        <img src="media/map_image.png" alt="Карта іграшок">
+        Карта іграшок
+    </a>
+  </nav>
+
+  <div class="map-container">
+    <img src="media/my_interactive_image.jpg" alt="Інтерактивна карта магазину" usemap="#image-map">
+
+    <map name="image-map">
+        <area target="" alt="М'які іграшки" title="М'які іграшки" href="myaki.html" coords="2,269,155,865" shape="rect">
+        <area target="" alt="Конструктори" title="Конструктори" href="konstruktory.html" coords="169,219,855,414" shape="rect">
+        <area target="" alt="Музичні іграшки" title="Музичні іграшки" href="muzychni.html" coords="877,283,1019,894" shape="rect">
+    </map>
+
+    <p>Натисніть на різні частини карти, щоб перейти до відповідних категорій іграшок.</p>
+  </div>
+</body>
+</html>

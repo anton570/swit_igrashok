@@ -1,0 +1,308 @@
+body {
+  background-color: #f8f8f8;
+  color: #000000;
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+nav {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  padding: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+nav a {
+  margin: 0 15px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 5px;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+nav a img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+nav a.active {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
+.logo-container {
+  margin-top: 20px;
+}
+
+.logo-container img {
+  width: 150px;
+  height: auto;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* Стилі для основного контенту */
+.content-block {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: left; /* Вирівнювання тексту всередині блоку по лівому краю */
+}
+
+.content-block h2 {
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.content-block ul {
+  list-style-type: disc; /* Маркери для списку */
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.content-block ol {
+  list-style-type: decimal; /* Нумерація для списку */
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.content-block li {
+  margin-bottom: 5px;
+}
+
+.nested-list {
+  list-style-type: circle; /* Вкладений список з іншим маркером */
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+/* Таблиця */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+caption {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #e9e9e9;
+}
+
+/* Стилі для відео (iframe) */
+iframe {
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Стилі для зображень у контентних блоках */
+.content-block img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 15px 0;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.map-container {
+  margin: 20px auto;
+  max-width: 1000px;
+  position: relative;
+}
+.map-container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+area {
+    outline: none;
+}
+
+/* Стилі для псевдо-кнопки */
+.button-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* ЗАГАЛЬНИЙ СТИЛЬ ДЛЯ ПСЕВДО-КНОПКИ ВЖЕ Є, ВИКОРИСТОВУЄМО ЙОГО */
+.pseudo-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #28a745; /* Зелений колір */
+  color: white;
+  text-decoration: none;
+  border: none; /* Додав, якщо його не було */
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer; /* Додав для інтерактивності */
+  font-size: 1em; /* Збільшив розмір тексту кнопки для кращої читабельності */
+}
+
+.pseudo-button:hover {
+  background-color: #218838; /* Темніший зелений при наведенні */
+  transform: translateY(-2px); /* Легкий підйом */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.pseudo-button:disabled {
+    background-color: #cccccc; /* Сірий колір для вимкнених кнопок */
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+
+/* --- ПОЧАТОК СТИЛІВ ДЛЯ ТЕСТУ --- */
+/* Стилі для контейнера тесту */
+#toy-quiz-container {
+  max-width: 600px;
+  margin: 40px auto; /* Збільшив відступ для кращого відокремлення */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+/* Стилі для прогресу тесту */
+#quiz-progress {
+  text-align: right;
+  margin-bottom: 10px;
+  color: #666;
+  font-size: 0.9em;
+}
+
+/* Стилі для питань */
+.quiz-question {
+  margin-bottom: 20px;
+}
+
+.quiz-question h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+/* Стилі для варіантів відповідей */
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #f5f5f5;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.2s;
+  border: 1px solid #eee;
+}
+
+.quiz-option:hover {
+  background: #e9e9e9;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.quiz-option input {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+/* Стилі для навігаційних кнопок */
+#quiz-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Стилі для результату тесту */
+#quiz-result {
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+#quiz-result h3 {
+    color: #28a745;
+}
+
+#quiz-result p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+#quiz-result ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+#quiz-result li {
+    background-color: #e6ffe6;
+    padding: 8px 15px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccebcc;
+}
+/* --- КІНЕЦЬ СТИЛІВ ДЛЯ ТЕСТУ --- */

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Про нас</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Про магазин "Світ Іграшок"</h1>
+
+  <nav>
+    <a href="index.html">
+        <img src="media/logo.png" alt="Головна">
+        Головна
+    </a>
+    <a href="myaki.html">
+        <img src="media/myaki_icon.png" alt="М’які іграшки">
+        М’які іграшки
+    </a>
+    <a href="muzychni.html">
+        <img src="media/muzychni_icon.png" alt="Музичні іграшки">
+        Музичні іграшки
+    </a>
+    <a href="konstruktory.html">
+        <img src="media/konstruktory_icon.png" alt="Конструктори">
+        Конструктори
+    </a>
+    <a href="pro_nas.html" class="active">
+        <img src="media/pro_nas_icon.png" alt="Про нас">
+        Про нас
+    </a>
+    <a href="map.html">
+        <img src="media/map_image.png" alt="Карта іграшок">
+        Карта іграшок
+    </a>
+  </nav>
+
+  <div class="content-block">
+    <h2>Ласкаво просимо до "Світ Іграшок" – місця, де збуваються дитячі мрії!</h2>
+    <p>Ми раді вітати вас у нашому онлайн-магазині, створеному з любов'ю та турботою про кожного маленького клієнта та його батьків. Наша місія – дарувати радість, розвивати творчість та допомагати дітям пізнавати світ через гру.</p>
+
+    <h2>Наші переваги:</h2>
+    <ul>
+      <li>Широкий асортимент: від м'яких іграшок до розвиваючих конструкторів.</li>
+      <li>Висока якість: всі товари сертифіковані та безпечні для дітей.</li>
+      <li>Доступні ціни: ми віримо, що якісні іграшки мають бути доступними кожному.</li>
+      <li>Зручна доставка: швидка та надійна доставка по всій Україні.</li>
+      <li>Професійна консультація: наші фахівці завжди готові допомогти вам з вибором.</li>
+    </ul>
+
+    <h2>Як зробити замовлення:</h2>
+    <ol>
+      <li>Оберіть товари на нашому сайті.</li>
+      <li>Додайте їх до кошика.</li>
+      <li>Заповніть форму замовлення.</li>
+      <li>Наш менеджер зв'яжеться з вами для підтвердження.</li>
+      <li>Отримайте свої іграшки та насолоджуйтесь!</li>
+    </ol>
+
+    <h2>Категорії іграшок та їх особливості:</h2>
+    <ul>
+      <li>М’які іграшки:
+        <ul class="nested-list">
+          <li>Приємні на дотик та безпечні.</li>
+          <li>Для обіймів та створення затишку.</li>
+        </ul>
+      </li>
+      <li>Музичні іграшки:
+        <ul class="nested-list">
+          <li>Розвивають слух та ритм.</li>
+          <li>Сприяють творчому розвитку.</li>
+        </ul>
+      </li>
+      <li>Конструктори:
+        <ul class="nested-list">
+          <li>Розвивають логіку та дрібну моторику.</li>
+          <li>Для створення унікальних моделей.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div id="toy-quiz-container">
+      <h2>Тест: "Яка іграшка ідеально підійде вашій дитині?"</h2>
+      
+      <div id="quiz-progress">Питання 1 з 5</div>
+      
+      <form id="toy-quiz-form">
+        <div id="quiz-questions"></div>
+        
+        <div id="quiz-navigation">
+          <button type="button" id="prev-btn" class="pseudo-button" disabled>← Назад</button>
+          <button type="button" id="next-btn" class="pseudo-button">Далі →</button>
+          <button type="button" id="submit-btn" class="pseudo-button" style="display:none;">Отримати результат</button>
+        </div>
+      </form>
+      
+      <div id="quiz-result" style="display:none;">
+        <h3>Результат:</h3>
+        <p id="result-text"></p>
+        <button id="restart-btn" class="pseudo-button">Пройти тест знову</button>
+      </div>
+    </div>
+    <h2>Наш магазин у дії:</h2>
+    <iframe width="100%" height="400"
+      src="https://www.youtube.com/embed/3WGBkWrBd0M"
+      title="Світ Іграшок - відео" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+    <p><i>Автор відео: Ксенія Гривина. Джерело:
+      <a href="https://youtu.be/3WGBkWrBd0M" target="_blank">Відео на YouTube</a></i></p>
+  </div> <script>
+    // Дані тесту
+    const quizData = [
+      {
+        question: "Вкажіть вік вашої дитини:",
+        type: "radio",
+        options: [
+          { text: "1-3 роки", value: "toddler" },
+          { text: "4-6 років", value: "preschool" },
+          { text: "7-10 років", value: "school" },
+          { text: "11+ років", value: "teen" }
+        ]
+      },
+      {
+        question: "Який тип іграшок найбільше подобається вашій дитині?",
+        type: "checkbox",
+        options: [
+          { text: "М'які іграшки", value: "soft" },
+          { text: "Музичні іграшки", value: "music" },
+          { text: "Конструктори", value: "constructor" },
+          { text: "Розвиваючі ігри", value: "educational" }
+        ]
+      },
+      {
+        question: "Які критерії для вас найважливіші при виборі іграшки?",
+        type: "checkbox",
+        options: [
+          { text: "Безпека матеріалів", value: "safety" },
+          { text: "Розвиваючий ефект", value: "development" },
+          { text: "Ціна", value: "price" },
+          { text: "Бренд/Виробник", value: "brand" }
+        ]
+      },
+      {
+        question: "Як часто ви купуєте іграшки для дитини?",
+        type: "radio",
+        options: [
+          { text: "Раз на тиждень", value: "week" },
+          { text: "Раз на місяць", value: "month" },
+          { text: "Раз на півроку", value: "half-year" },
+          { text: "Рідше", value: "rare" }
+        ]
+      },
+      {
+        question: "Які активності найбільше подобаються вашій дитині?",
+        type: "checkbox",
+        options: [
+          { text: "Рухливі ігри на свіжому повітрі", value: "outdoor_active" },
+          { text: "Творчість (малювання, ліплення)", value: "creative" },
+          { text: "Спокійні ігри вдома (читання, настільні ігри)", value: "indoor_calm" },
+          { text: "Дослідження та експерименти", value: "exploration" }
+        ]
+      }
+    ];
+
+    // Результати на основі відповідей
+    const results = {
+      toddler: {
+        soft: "М'які іграшки для найменших (наприклад, плюшеві ведмедики, м'які кубики)",
+        music: "Дитячі піаніно та барабани (безпечні, яскраві)",
+        constructor: "Великі м'які блоки (для розвитку моторики)",
+        educational: "Іграшки-сортери та бізіборди (для дрібної моторики та логіки)",
+        outdoor_active: "Прості каталки, іграшки для пісочниці",
+        creative: "Набори для малювання пальчиковими фарбами, тісто для ліплення",
+        indoor_calm: "Великі пазли, книжки-розкладачки",
+        exploration: "Пірамідки, сортери форм"
+      },
+      preschool: {
+        soft: "Іграшки-персонажі казок (для рольових ігор)",
+        music: "Дитячі синтезатори, ксилофони",
+        constructor: "LEGO Duplo, великі дерев'яні конструктори",
+        educational: "Настільні ігри для дошкільнят, логічні кубики",
+        outdoor_active: "М'ячі, самокати, дитячі спортивні комплекси",
+        creative: "Набори для малювання, аплікації, ліплення",
+        indoor_calm: "Настільні ігри, лялькові будиночки, машинки",
+        exploration: "Набори для перших дослідів, лупи, ігрові набори професій"
+      },
+      school: {
+        soft: "Інтерактивні іграшки (роботи, ляльки, що говорять)",
+        music: "Дитячі гітари, синтезатори з більшою кількістю функцій",
+        constructor: "Складні конструктори (LEGO Classic, Technic, металеві конструктори)",
+        educational: "Наукові набори та головоломки, енциклопедії-ігри",
+        outdoor_active: "Ролики, скейтборди, набори для бадмінтону",
+        creative: "Набори для створення прикрас, мозаїки, моделювання",
+        indoor_calm: "Стратегічні настільні ігри, пазли від 500 елементів",
+        exploration: "Набори для хімічних дослідів, мікроскопи, телескопи"
+      },
+      teen: {
+        soft: "Колекційні м'які іграшки (фігурки з аніме, ігор)",
+        music: "Професійне музичне обладнання (навушники, міні-синтезатори)",
+        constructor: "Електронні конструктори, роботи, 3D-пазли",
+        educational: "Стратегічні настільні ігри, STEM-набори, головоломки високої складності",
+        outdoor_active: "Спортивне обладнання, фризбі, настільний теніс",
+        creative: "Набори для скетчингу, каліграфії, створення коміксів",
+        indoor_calm: "Складні настільні ігри (RPG), книги в жанрі фентезі/фантастики",
+        exploration: "Набори для програмування, квадрокоптери, Arduino"
+      }
+    };
+
+    // Змінні для роботи тесту
+    let currentQuestion = 0;
+    let answers = {};
+
+    // Ініціалізація тесту
+    function initQuiz() {
+      showQuestion();
+      document.getElementById('prev-btn').addEventListener('click', prevQuestion);
+      document.getElementById('next-btn').addEventListener('click', nextQuestion);
+      document.getElementById('submit-btn').addEventListener('click', showResult);
+      document.getElementById('restart-btn').addEventListener('click', restartQuiz);
+    }
+
+    // Показати поточне питання
+    function showQuestion() {
+      const questionContainer = document.getElementById('quiz-questions');
+      const questionData = quizData[currentQuestion];
+      
+      questionContainer.innerHTML = `
+        <div class="quiz-question">
+          <h3>${questionData.question}</h3>
+          ${generateOptions(questionData)}
+        </div>
+      `;
+      
+      updateProgress();
+      updateButtons();
+    }
+
+    // Генерувати варіанти відповідей
+    function generateOptions(questionData) {
+      let optionsHTML = '';
+      const inputType = questionData.type === 'radio' ? 'radio' : 'checkbox';
+      const nameAttr = `q${currentQuestion}`; // Унікальне ім'я для кожної групи питань
+      
+      questionData.options.forEach((option, index) => {
+        const isChecked = answers[currentQuestion] && answers[currentQuestion].includes(option.value);
+        optionsHTML += `
+          <label class="quiz-option">
+            <input type="${inputType}" name="${nameAttr}" value="${option.value}" ${isChecked ? 'checked' : ''}>
+            ${option.text}
+          </label>
+        `;
+      });
+      
+      return `<div class="quiz-options">${optionsHTML}</div>`;
+    }
+
+    // Оновити прогрес
+    function updateProgress() {
+      document.getElementById('quiz-progress').textContent = 
+        `Питання ${currentQuestion + 1} з ${quizData.length}`;
+    }
+
+    // Оновити стан кнопок
+    function updateButtons() {
+      document.getElementById('prev-btn').disabled = currentQuestion === 0;
+      
+      if (currentQuestion === quizData.length - 1) {
+        document.getElementById('next-btn').style.display = 'none';
+        document.getElementById('submit-btn').style.display = 'inline-block';
+      } else {
+        document.getElementById('next-btn').style.display = 'inline-block';
+        document.getElementById('submit-btn').style.display = 'none';
+      }
+    }
+
+    // Зберегти відповіді
+    function saveAnswers() {
+      const questionData = quizData[currentQuestion];
+      const inputs = document.querySelectorAll(`input[name="q${currentQuestion}"]:checked`);
+      
+      answers[currentQuestion] = Array.from(inputs).map(input => input.value);
+    }
+
+    // Наступне питання
+    function nextQuestion() {
+      saveAnswers();
+      currentQuestion++;
+      showQuestion();
+    }
+
+    // Попереднє питання
+    function prevQuestion() {
+      saveAnswers();
+      currentQuestion--;
+      showQuestion();
+    }
+
+    // Показати результат
+    function showResult() {
+      saveAnswers();
+      
+      const ageAnswer = answers[0]?.[0]; // Відповідь на перше питання (вік)
+      const typeAnswers = answers[1] || []; // Відповідь на друге питання (тип іграшок)
+      const activityAnswers = answers[4] || []; // Відповідь на п'яте питання (активності)
+      
+      let recommendations = new Set(); // Використовуємо Set для автоматичного видалення дублікатів
+      
+      if (ageAnswer) {
+          // Додаємо рекомендації за типом іграшок
+          if (typeAnswers.length > 0) {
+              typeAnswers.forEach(type => {
+                  if (results[ageAnswer] && results[ageAnswer][type]) {
+                      recommendations.add(results[ageAnswer][type]);
+                  }
+              });
+          }
+
+          // Додаємо рекомендації за активностями
+          if (activityAnswers.length > 0) {
+              activityAnswers.forEach(activity => {
+                  if (results[ageAnswer] && results[ageAnswer][activity]) {
+                      recommendations.add(results[ageAnswer][activity]);
+                  }
+              });
+          }
+
+          // Якщо жоден конкретний критерій не вибрано, або не спрацювало, дати загальні рекомендації по віку
+          if (recommendations.size === 0 && results[ageAnswer]) {
+              Object.values(results[ageAnswer]).forEach(rec => recommendations.add(rec));
+          }
+      }
+
+      let resultText = '';
+      if (recommendations.size > 0) {
+        resultText = `На основі ваших відповідей рекомендуємо: <ul>`;
+        recommendations.forEach(rec => { 
+            resultText += `<li>${rec}</li>`;
+        });
+        resultText += `</ul>Завітайте до відповідних розділів нашого магазину!`;
+      } else {
+        resultText = "На жаль, ми не змогли визначити ідеальні іграшки для вашої дитини. Спробуйте пройти тест ще раз.";
+      }
+      
+      document.getElementById('result-text').innerHTML = resultText;
+      document.getElementById('toy-quiz-form').style.display = 'none';
+      document.getElementById('quiz-result').style.display = 'block';
+    }
+
+    // Почати тест знову
+    function restartQuiz() {
+      currentQuestion = 0;
+      answers = {};
+      document.getElementById('toy-quiz-form').style.display = 'block';
+      document.getElementById('quiz-result').style.display = 'none';
+      showQuestion();
+    }
+
+    // Запустити тест після завантаження сторінки
+    document.addEventListener('DOMContentLoaded', initQuiz);
+  </script>
+</body>
+</html>
